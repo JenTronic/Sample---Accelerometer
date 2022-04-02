@@ -5,7 +5,7 @@ This is the sample code for using the accelerometer. Here is a [link to our webp
 # Wiring
 
 <br />
-![Wiring](/Images/Accelerometer-Schematic-Colored.png)
+![Wiring of this example](/Images/Accelerometer-Schematic-Colored.png)
 
 # Description
 
