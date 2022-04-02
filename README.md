@@ -7,31 +7,14 @@ Tool for generating labels for letters - using LibreOffice Writer and customer d
 
 ![Wiring](/Images/Accelerometer-Schematic-Colored.png)
 
-# How to use Build Letter?
+# Description
 
-First start is all about gaining access to your PrestaShop database, and preparing needed templates:<br /><br />
-<ol>
-<li>Run "Build Letter.ps1" using PowerShell.</li>
-<li>Fill in the database information - for your PrestaShop database, and hit the "Save Settings" button.</li>
-<li>Modify the LibreOffice Writer templates, located within the Templates folder.</li>
-</ol>
-<br />
-Now Build Letter is ready for use, so for each label needed, all you do is:<br /><br />
-<ol>
-<li>Run "Build Letter.ps1" using PowerShell.</li>
-<li>Enter a valid order ID, from your PrestaShop webshop.</li>
-<li>Select which type of address to retrieve, and which template to use - and click the "Generate" button.</li>
-<li>LibreOffice will now open the new label for final modification - i.e entering of the postage code.</li>
-<li>Save the new label, and click the "Print Label" button.
-</ol><br />
+This example shows how you can use the Accelerometer / Gyroscope module to control a sphere on an OLED display.<br />
 
-# Running code before and after printing 
+The communication with the MPU6050 chip on the accelerometer module, takes place using the serial IIC (I2C) protocol. Therefore, we use the [Wire](https://www.arduino.cc/en/reference/wire) library, and we specify which IIC address the MPU6050 chip has (0x68). When the program is executed, we start by sending the value 0 to register 0x6B. This is done in order to wake the MPU6050 chip from sleep mode, and ask it to start taking measurements.<br />
 
-Some printers may need special configuration, in order to print the labels - or perhaps you just need to run some code when printing.
+We now repeat reading the registers 0x3B - 0x3E, in order to read out the current accelerometer measurements, for the axes X and Y. We store 20 of these measurements, and calcute the average of these 20 measurements - for moving sphere on the screen - if the MPU6050 chip is tilted away from horizontal position.
 
-If running additional code is needed, you may edit the "Functions.ps1" file, and create new functions, that will run automatically, when a specific printer is used:
+Simply copy the sample into a new Arduino project, and you're ready to go. Note that you must install the [U8g2](https://www.arduinolibraries.info/libraries/u8g2) library before you can build the program - and that a NodeMCU ESP8266 is used in the example.
 
-Before-[printer_name]: <span style="color:gray;font-size:0.8em">*(Code is running before printing)*</span><br />
-After-[printer_name]: <span style="color:gray;font-size:0.8em">*(Code is running after printing)*</span>
-
-(Note that spaces " " in [printer_name] must be replaced with underscores "_". )
+The MPU6050 chip is extremely advanced, and in the example show here, we have only just touched the surface of the possibilities. If you want to read more about what you can read from the chip, you can see the [register documentation here](https://www.invensense.com/wp-content/uploads/2015/02/MPU-6000-Register-Map1.pdf).
