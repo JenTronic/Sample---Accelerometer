@@ -18,3 +18,5 @@ The MPU6050 chip is extremely advanced, and in the example show here, we have on
 
 <br />
 [Wiring](/Images/Accelerometer-Schematic-Colored.png)
+
+lala
