@@ -3,7 +3,6 @@
 This is the sample code for using the accelerometer. Here is a [link to our webpage](https://jentronic.dk/content/17-accelerometer-kode-eksempel), with danish translation of the example.<br />
 
 # Wiring
-Tool for generating labels for letters - using LibreOffice Writer and customer data from Prestashop.<br />
 
 ![Wiring](/Images/Accelerometer-Schematic-Colored.png)
 
