@@ -2,11 +2,6 @@
 
 This is the sample code for using the accelerometer. Here is a [link to our webpage](https://jentronic.dk/content/17-accelerometer-kode-eksempel), with danish translation of the example.<br />
 
-# Wiring
-
-<br />
-![Wiring of this example](/Images/Accelerometer-Schematic-Colored.png)
-
 # Description
 
 This example shows how you can use the Accelerometer / Gyroscope module to control a sphere on an OLED display.<br />
@@ -19,4 +14,8 @@ Simply copy the sample into a new Arduino project, and you're ready to go. Note 
 
 The MPU6050 chip is extremely advanced, and in the example show here, we have only just touched the surface of the possibilities. If you want to read more about what you can read from the chip, you can see the [register documentation here](https://www.invensense.com/wp-content/uploads/2015/02/MPU-6000-Register-Map1.pdf).<br />
 
+# Wiring
+<br />
+
+![Wiring](/Images/Accelerometer-Schematic-Colored.png)
 
